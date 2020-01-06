@@ -25,14 +25,35 @@
 
 <body>
     <div id="step1" class="step">
-        <div class="slds-form-element">
-                <label class="slds-form-element__label" for="text-input-01">URL</label>
-                  <div class="slds-form-element__control">
-                    <input id="text-input-01" class="slds-input" type="text" placeholder="Placeholder Text" />
-                </div>
-            </div>
-
-        <div class="slds-grid">
+        <template>
+    <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+        <lightning-record-edit-form
+                    id="recordViewForm"
+                    record-id="003R00000000000000"
+                    record-type-id="012R00000000000000"
+                    object-api-name="Contact">
+            <lightning-messages></lightning-messages>
+            <lightning-input-field field-name="Message Name">
+            </lightning-input-field>
+            <lightning-input-field field-name="Sender Name">
+            </lightning-input-field>
+            <lightning-input-field field-name="Message Subject">
+            </lightning-input-field>
+            <lightning-input-field field-name="Message Body">
+            </lightning-input-field>
+            <!--Picklist-->
+            <lightning-input-field field-name="Call to action label">
+            </lightning-input-field>
+            <lightning-input-field field-name="Call to action URL">
+            </lightning-input-field>
+            <lightning-button type="submit"
+                        label="Update record"
+                        class="slds-m-top_medium">
+            </lightning-button>
+        </lightning-record-edit-form>
+    </div>
+        </template>
+        <!--div class="slds-grid">
             
             <main class="slds-col">
                
@@ -40,7 +61,7 @@
             </main>
             
 
-        </div>
+        </div-->
 
     </div>
 </body>
