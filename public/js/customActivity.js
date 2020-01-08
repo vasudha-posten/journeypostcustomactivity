@@ -17,7 +17,8 @@ define([
     connection.on('clickedNext', save);
    
     function onRender() {
-        console.log("Test1");
+        alert('Test1 ');
+        console.log('Test1');
         // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
 
