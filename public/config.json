@@ -1,34 +1,28 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-       "icon": "images/icon.png",
+        "icon": "images/icon.png",
         "iconSmall": "images/iconSmall.png",
         "category": "message"
     },
     "type": "REST",
     "lang": {
-       "en-US": {
-           "name": "MyBring Message",
-           "description": "An example REST activity using workflow API v1.1 format."
-       }
+        "en-US": {
+            "name": "Bring Message",
+          "description": "A Template for a custom Journey Builder activity",
+          "step1Label": "Configure Activity"
+        }
     },
     "arguments": {
         "execute": {
-            "inArguments": [
-                {
+           "inArguments":[
+				{
                     "emailAddress": "{{InteractionDefaults.Email}}"
-                },
-                {
-                    "phoneNumber": "{{Contact.Default.PhoneNumber}}"
-                }
-            ],
-            "outArguments": [
-                {
-                    "foundSignupDate": ""
-                }
-            ],
-            "url": "https://customactivityapp.herokuapp.com/journeybuilder/execute"
-            "verb": "POST",
+                }									
+			],
+          "outArguments": [],
+          "url": "https://customactivityapp.herokuapp.com/journeybuilder/execute",
+           "verb": "POST",
             "body": "",
             "header": "",
             "format": "json",
@@ -37,61 +31,43 @@
         }
     },
     "configurationArguments": {
-        "applicationExtensionKey": "a20a1b28-cff6-4f08-974e-7a3ef9b31094",
-       "save": {
-           "url": "https://customactivityapp.herokuapp.com/journeybuilder/save"
+      "applicationExtensionKey": "a20a1b28-cff6-4f08-974e-7a3ef9b31094",
+      "save": {
+        "url": "https://customactivityapp.herokuapp.com/journeybuilder/save",
+          "verb": "POST",
+        "useJwt": true
        },
        "publish": {
-           "url": "https://customactivityapp.herokuapp.com/journeybuilder/publish"
+        "url": "https://customactivityapp.herokuapp.com/journeybuilder/publish",
+           "verb": "POST",
+        "useJwt": true
        },
-       "validate": {
-           "url": "https://customactivityapp.herokuapp.com/journeybuilder/validate"
-       },
-       "stop": {
-           "url": "https://customactivityapp.herokuapp.com/journeybuilder/stop"
-       }
+      "stop": {
+        "url": "https://customactivityapp.herokuapp.com/journeybuilder/stop",
+           "verb": "POST",
+        "useJwt": true
+      },
+      "validate": {
+        "url": "https://customactivityapp.herokuapp.com/journeybuilder/validate",
+        "verb": "POST",
+        "useJwt": true
+      }
     },
     "wizardSteps": [
-       { "label": "Step 1", "key": "step1" },
-       { "label": "Step 2", "key": "step2" },
-       { "label": "Step 3", "key": "step3" },
-       { "label": "Step 4", "key": "step4", "active": false }
+        { "label": "Configure Activity", "key": "step1" }
     ],
     "userInterfaces": {
-       "configModal": {
-           "height": 200,
-           "width": 300,
-           "fullscreen": true
-       }
+        "configModal": {
+            "height": 400,
+            "width": 500,
+          "fullscreen": false
+        }
     },
     "schema": {
         "arguments": {
             "execute": {
-                "inArguments": [
-                    {
-                        "phoneNumber": {
-                            "dataType": "Phone",
-                            "isNullable": false,
-                            "direction": "in"   
-                        }
-                    },
-                    {
-                        "emailAddress": {
-                            "dataType": "Email",
-                            "isNullable": false,
-                            "direction": "in"
-                        }
-                    }
-                ],
-                "outArguments": [
-                    {
-                        "foundSignupDate": {
-                            "dataType": "Date",
-                            "direction": "out",
-                            "access": "visible"
-                        }
-                    }
-                ]
+                "inArguments": [],
+                "outArguments": []
             }
         }
     }
