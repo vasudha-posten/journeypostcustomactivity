@@ -1,13 +1,14 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-       "icon": "images/sms.png",
-       "category": "message"
+       "icon": "images/icon.png",
+        "iconSmall": "images/iconSmall.png",
+        "category": "message"
     },
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "REST Activity (Workflow API v1.1)",
+           "name": "MyBring Message",
            "description": "An example REST activity using workflow API v1.1 format."
        }
     },
@@ -26,21 +27,28 @@
                     "foundSignupDate": ""
                 }
             ],
-            "url": "https://some-endpoint.com/execute"
+            "url": "https://customactivityapp.herokuapp.com/journeybuilder/execute"
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": true,
+            "timeout": 10000
         }
     },
     "configurationArguments": {
+        "applicationExtensionKey": "a20a1b28-cff6-4f08-974e-7a3ef9b31094",
        "save": {
-           "url": "URI/for/your/activity/save"
+           "url": "https://customactivityapp.herokuapp.com/journeybuilder/save"
        },
        "publish": {
-           "url": "URI/for/your/activity/publish"
+           "url": "https://customactivityapp.herokuapp.com/journeybuilder/publish"
        },
        "validate": {
-           "url": "URI/for/your/activity/validate"
+           "url": "https://customactivityapp.herokuapp.com/journeybuilder/validate"
        },
        "stop": {
-           "url": "URI/for/your/activity/stop"
+           "url": "https://customactivityapp.herokuapp.com/journeybuilder/stop"
        }
     },
     "wizardSteps": [
