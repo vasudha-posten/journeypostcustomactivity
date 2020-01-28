@@ -27,7 +27,7 @@ define([
 
     }
 
-    /*function initialize(data) {
+    function initialize(data) {
         console.log(data);
         if (data) {
             payload = data;
@@ -71,7 +71,7 @@ define([
         payload['metaData'].isConfigured = true;
         console.log(payload);
         connection.trigger('updateActivity', payload);*/
-    }*/
+    }
 
 
 });
