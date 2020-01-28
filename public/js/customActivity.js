@@ -10,19 +10,19 @@ define([
     var payload = {};
     $(window).ready(onRender);
 
-    //connection.on('initActivity', initialize);
-    //connection.on('requestedTokens', onGetTokens);
-   // connection.on('requestedEndpoints', onGetEndpoints);
+    connection.on('initActivity', initialize);
+    connection.on('requestedTokens', onGetTokens);
+    connection.on('requestedEndpoints', onGetEndpoints);
 
     connection.on('clickedNext', save);
    
     function onRender() {
-        /*alert('Test1 ');
+        alert('Test1 ');
         console.log('Test1');
         // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
         connection.trigger('requestTokens');
-        connection.trigger('requestEndpoints');*/
+        connection.trigger('requestEndpoints');
         console.log("Test2 ");
 
     }
