@@ -6,7 +6,7 @@ define([
     'use strict';
 
     var connection = new Postmonger.Session();
-    /*var authTokens = {};
+    var authTokens = {};
     var payload = {};
      var steps = [ // initialize to the same value as what's set in config.json for consistency
             { "label": "Step 1", "key": "step1" }
@@ -59,7 +59,7 @@ define([
     }
     function onGetEndpoints(endpoints) {
         console.log(endpoints);
-    }*/
+    }
     function save() {
         /*var postcardURLValue = $('#postcard-url').val();
         var postcardTextValue = $('#postcard-text').val();
