@@ -28,7 +28,7 @@
             "format": "json",
 	    "customerKey": "n4C6s0pEF4lA1ePrhFRHRXRfNBO_INV9S9Cnl_Jnpl5-E8B7C6f8wre7Wx5PJk5oCOsLWhQgW2dJ46qNtKcvWV_HSqusOxNWOkyYiYUSWv3tzxs39oZp0LgCCEE5dX99H2SYNh5fREIVtusZEHg8rwvK88qysk5wJOAkleaVJsRCV1FDRXSRNjqNPJa5TDw5Cqh0b1s_cbrICeHf1oXsy18H8KJQ4adDlnBjEGQXnrwcKRLMQIztMz_ePLUsJQ2",
             "useJwt": true,
-            "timeout": 10000
+            "timeout": 100
         }
     },
     "configurationArguments": {
