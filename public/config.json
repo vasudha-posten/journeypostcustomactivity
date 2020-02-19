@@ -17,8 +17,8 @@
         "execute": {
            "inArguments":[
 				{
-                    "emailAddress": "{{Contract.Attribute.TestCustomActivity.Email}}"
-		    "Name" : "{{Contract.Attribute.TestCustomActivity.Name}}"
+                    "emailAddress": "{{Contract.Attribute.TestCustomActivity.Email}}",
+		    "Name" : "{{Contract.Attribute.TestCustomActivity.Name}}",
 		    "Contactkey": "{{Contract.Attribute.TestCustomActivity.ContactId}}"
                 }									
 			],
@@ -28,37 +28,32 @@
             "body": "",
             "header": "",
             "format": "json",
-	   // "customerKey": "n4C6s0pEF4lA1ePrhFRHRXRfNBO_INV9S9Cnl_Jnpl5-E8B7C6f8wre7Wx5PJk5oCOsLWhQgW2dJ46qNtKcvWV_HSqusOxNWOkyYiYUSWv3tzxs39oZp0LgCCEE5dX99H2SYNh5fREIVtusZEHg8rwvK88qysk5wJOAkleaVJsRCV1FDRXSRNjqNPJa5TDw5Cqh0b1s_cbrICeHf1oXsy18H8KJQ4adDlnBjEGQXnrwcKRLMQIztMz_ePLUsJQ2",
             "useJwt": true,
             "timeout": 10000
         }
     },
     "configurationArguments": {
-     /* "applicationExtensionKey": "a20a1b28-cff6-4f08-974e-7a3ef9b31094",
+     "applicationExtensionKey": "a20a1b28-cff6-4f08-974e-7a3ef9b31094",
       "save": {
         "url": "https://customactivityapp.herokuapp.com/journeybuilder/save",
         "verb": "POST",
-	//"customerKey": "n4C6s0pEF4lA1ePrhFRHRXRfNBO_INV9S9Cnl_Jnpl5-E8B7C6f8wre7Wx5PJk5oCOsLWhQgW2dJ46qNtKcvWV_HSqusOxNWOkyYiYUSWv3tzxs39oZp0LgCCEE5dX99H2SYNh5fREIVtusZEHg8rwvK88qysk5wJOAkleaVJsRCV1FDRXSRNjqNPJa5TDw5Cqh0b1s_cbrICeHf1oXsy18H8KJQ4adDlnBjEGQXnrwcKRLMQIztMz_ePLUsJQ2",
         "useJwt": true
        },
        "publish": {
         "url": "https://customactivityapp.herokuapp.com/journeybuilder/publish",
            "verb": "POST",
-	   //    "customerKey": "n4C6s0pEF4lA1ePrhFRHRXRfNBO_INV9S9Cnl_Jnpl5-E8B7C6f8wre7Wx5PJk5oCOsLWhQgW2dJ46qNtKcvWV_HSqusOxNWOkyYiYUSWv3tzxs39oZp0LgCCEE5dX99H2SYNh5fREIVtusZEHg8rwvK88qysk5wJOAkleaVJsRCV1FDRXSRNjqNPJa5TDw5Cqh0b1s_cbrICeHf1oXsy18H8KJQ4adDlnBjEGQXnrwcKRLMQIztMz_ePLUsJQ2",
         "useJwt": true
        },
       "stop": {
         "url": "https://customactivityapp.herokuapp.com/journeybuilder/stop",
          "verb": "POST",
-	// "customerKey": "n4C6s0pEF4lA1ePrhFRHRXRfNBO_INV9S9Cnl_Jnpl5-E8B7C6f8wre7Wx5PJk5oCOsLWhQgW2dJ46qNtKcvWV_HSqusOxNWOkyYiYUSWv3tzxs39oZp0LgCCEE5dX99H2SYNh5fREIVtusZEHg8rwvK88qysk5wJOAkleaVJsRCV1FDRXSRNjqNPJa5TDw5Cqh0b1s_cbrICeHf1oXsy18H8KJQ4adDlnBjEGQXnrwcKRLMQIztMz_ePLUsJQ2",
         "useJwt": true
       },
       "validate": {
         "url": "https://customactivityapp.herokuapp.com/journeybuilder/validate",
         "verb": "POST",
-	//"customerKey": "n4C6s0pEF4lA1ePrhFRHRXRfNBO_INV9S9Cnl_Jnpl5-E8B7C6f8wre7Wx5PJk5oCOsLWhQgW2dJ46qNtKcvWV_HSqusOxNWOkyYiYUSWv3tzxs39oZp0LgCCEE5dX99H2SYNh5fREIVtusZEHg8rwvK88qysk5wJOAkleaVJsRCV1FDRXSRNjqNPJa5TDw5Cqh0b1s_cbrICeHf1oXsy18H8KJQ4adDlnBjEGQXnrwcKRLMQIztMz_ePLUsJQ2",
-        "useJwt": true
-      }*/
+																																																        "useJwt": true
+      }
     },
     "wizardSteps": [
         { "label": "Configure Activity", "key": "step1" }
