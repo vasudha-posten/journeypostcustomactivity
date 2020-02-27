@@ -61,9 +61,15 @@ define([
         console.log(endpoints);
     }
     function save() {
-        /*var postcardURLValue = $('#postcard-url').val();
-        var postcardTextValue = $('#postcard-text').val();
-        payload['arguments'].execute.inArguments = [{
+        var header = $('#header').val();
+        var messagename = $('#messagename').val();
+        var sendername = $('#sendername').val();
+        var messagename = $('#messagename').val();
+        var messagesubject = $('#messagesubject').val();
+        var messagebody = $('#messagebody').val();
+        var calltoactionlabel = $('#calltoactionlabel').val();
+        var calltoactionurl = $('#calltoactionurl').val();
+       /* payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             "emailAddress": "{{InteractionDefaults.Email}}"
         }];
@@ -71,7 +77,15 @@ define([
         payload['metaData'].isConfigured = true;
         console.log(payload);
         connection.trigger('updateActivity', payload);*/
-        console.log("Test-------------------------------");
+        console.log("header---------------"+header);
+        console.log("messagename----------"+messagename);
+        console.log("sendername-----------"+sendername);
+        console.log("messagename-------------"+messagename);
+        console.log("messagesubject------------"+messagesubject);
+        console.log("messagebody-------------"+messagebody);
+        console.log("calltoactionlabel------------"+calltoactionlabel);
+        console.log("calltoactionurl------------"+calltoactionurl);
+        
     }
 
 
