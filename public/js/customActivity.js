@@ -28,7 +28,7 @@ define([
     }
 
     function initialize(data) {
-        console.log(data);
+        console.log('data-----'+data);
         if (data) {
             payload = data;
         }
@@ -54,11 +54,11 @@ define([
         });
     }
     function onGetTokens(tokens) {
-        console.log(tokens);
+        console.log('tokens----------'+tokens);
         authTokens = tokens;
     }
     function onGetEndpoints(endpoints) {
-        console.log(endpoints);
+        console.log('endpoints-----------'+endpoints);
     }
     function save() {
         var header = $('#header').val();
