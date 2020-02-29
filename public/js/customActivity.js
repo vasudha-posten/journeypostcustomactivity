@@ -77,7 +77,7 @@ define([
         payload['metaData'].isConfigured = true;
         console.log(payload);
         connection.trigger('updateActivity', payload);*/
-         console.log("authTokens---------------"+authTokens);
+         //console.log("authTokens---------------"+authTokens);
         console.log("test---------------");
         console.log("header---------------"+header);
         console.log("messagename----------"+messagename);
