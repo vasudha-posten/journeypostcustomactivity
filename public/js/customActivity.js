@@ -87,6 +87,11 @@ define([
         console.log("messagebody-------------"+messagebody);
         console.log("calltoactionlabel------------"+calltoactionlabel);
         console.log("calltoactionurl------------"+calltoactionurl);
+        payload['arguments'].execute.inArguments = [{ "message": messagesubject }];
+
+        payload['metaData'].isConfigured = true;
+
+        connection.trigger('updateActivity', payload);
         
     }
 
