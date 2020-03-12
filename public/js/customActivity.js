@@ -93,9 +93,7 @@ define([
 
         connection.trigger('updateActivity', payload);
         
-          setTimeout(() => {
-        window.close();
-    }, 5000);
+          
     };
         
     }
