@@ -93,6 +93,9 @@ define([
 
         connection.trigger('updateActivity', payload);
         
+         window.close();
+    };
+        
     }
 
 
