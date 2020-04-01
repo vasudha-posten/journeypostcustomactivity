@@ -21,24 +21,6 @@ var APIKeys = {
 };
 
 
-// Simple custom middleware
-function tokenFromJWT( req, res, next ) {
-    // Setup the signature for decoding the JWT
-    var jwt = new JWT({appSignature: APIKeys.appSignature});
-    
-    // Object representing the data in the JWT
-    var jwtData = jwt.decode( req );
-
-    // Bolt the data we need to make this call onto the session.
-    // Since the UI for this app is only used as a management console,
-    // we can get away with this. Otherwise, you should use a
-    // persistent storage system and manage tokens properly with
-    // node-fuel
-    consolg.log('token..............+jwtData.token);
-    req.session.token = jwtData.token;
-    next();
-}
-
 
 // Configure Express
 app.set('port', process.env.PORT || 3000);
