@@ -8,6 +8,7 @@ var http        = require('http');
 var path        = require('path');
 var request     = require('request');
 var routes      = require('./routes');
+var JWT         = require('./lib/jwtDecoder');
 var activity    = require('./routes/activity');
 
 var app = express();
@@ -20,7 +21,23 @@ var APIKeys = {
     authUrl         : 'https://auth.exacttargetapis.com/v1/requestToken?legacy=1'
 };
 
+// Simple custom middleware
+function tokenFromJWT( req, res, next ) {
+    // Setup the signature for decoding the JWT
+    var jwt = new JWT({appSignature: APIKeys.appSignature});
+    
+    // Object representing the data in the JWT
+    var jwtData = jwt.decode( req );
 
+    // Bolt the data we need to make this call onto the session.
+    // Since the UI for this app is only used as a management console,
+    // we can get away with this. Otherwise, you should use a
+    // persistent storage system and manage tokens properly with
+    // node-fuel
+    consolg.log('token..............+jwtData.token);
+    req.session.token = jwtData.token;
+    next();
+}
 
 // Configure Express
 app.set('port', process.env.PORT || 3000);
