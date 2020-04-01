@@ -22,6 +22,7 @@ var APIKeys = {
 };
 
 
+
 // Configure Express
 app.set('port', process.env.PORT || 3000);
 app.use(bodyParser.raw({type: 'application/jwt'}));
@@ -39,14 +40,14 @@ if ('development' == app.get('env')) {
 
 // HubExchange Routes
 app.get('/', routes.index );
-app.post('/login', tokenFromJWT, routes.login );
+app.post('/login', routes.login );
 app.post('/logout', routes.logout );
 
 // Custom Hello World Activity Routes
-app.post('/save/', activity.save );
-app.post('/validate/', activity.validate );
-app.post('/publish/', activity.publish );
-app.post('/execute/', activity.execute );
+app.post('/journeybuilder/save/', activity.save );
+app.post('/journeybuilder/validate/', activity.validate );
+app.post('/journeybuilder/publish/', activity.publish );
+app.post('/journeybuilder/execute/', activity.execute );
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
