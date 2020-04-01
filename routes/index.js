@@ -1,11 +1,30 @@
 'use strict';
 
-module.exports = (body, secret, cb) => {
-	if (!body) {
-		return cb(new Error('invalid jwtdata'));
-	}
+// Deps
+var activity = require('./activity');
 
-	require('jsonwebtoken').verify(body.toString('utf8'), secret, {
-		algorithm: 'HS256'
-	}, cb);
+/*
+ * GET home page.
+ */
+exports.index = function(req, res){
+    if( !req.session.token ) {
+        res.render( 'index', {
+            title: 'Unauthenticated',
+            errorMessage: 'This app may only be loaded via Salesforce Marketing Cloud',
+        });
+    } else {
+        res.render( 'index', {
+            title: 'Journey Builder Activity',
+            results: activity.logExecuteData,
+        });
+    }
+};
+
+exports.login = function( req, res ) {
+    console.log( 'req.body: ', req.body );
+    res.redirect( '/' );
+};
+
+exports.logout = function( req, res ) {
+    req.session.token = '';
 };
